@@ -1,20 +1,34 @@
-//basic JS objects
+// spread and rest opeartor
 
-let demoObj = {
+// spread operator
+
+let obj = {
   name: "Pritam",
   age: 25,
-  graduate: true,
 };
 
-console.log(demoObj.name);
+let objectSpread = { ...obj };
+console.log(objectSpread);
 
-// array examples
+let arrayDemo = ["Pritam", "James", "Rupam", "Sayan"];
+let arraySpread = [...arrayDemo];
+console.log(arraySpread);
 
-let demoArray = ["Kolkata", "Mumbai", "Chennai", "Pune"];
+// rest operator
 
-for (let city of demoArray) {
-  console.log(city);
-}
+let sum = (...args) => {
+  return args;
+};
 
-console.log(demoArray.map((cityName) => "City:" + cityName));
-console.log(demoArray);
+console.log(sum(1, 2, 3));
+
+// destructuring
+
+// array destructuring
+
+const [cc, dd] = arrayDemo;
+console.log(cc);
+
+// object destructuring
+const { name } = obj;
+console.log("My name is " + name);
